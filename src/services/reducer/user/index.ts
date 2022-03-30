@@ -5,7 +5,7 @@ class User {
       ...state,
       users: state.user.map((user: any): any =>
         user.id !== action.id
-          ? user
+          ? !!user
           : {
               ...user,
               isActive: action.isActive,
